@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { ChatMessagesContext } from "../../../context/ChatMessagesContext";
 import "./contactList.scss";
+import { useNavigate } from "react-router-dom";
 
 const ContactList = () => {
   const { fetchInitialMessages } = useContext(ChatMessagesContext);
   const [contactList, setcontactList] = useState([]);
   const [selectedContactId, setSelectedContactId] = useState(null);
+  const navigate = useNavigate();
 
   const fetchContactList = async () => {
     const response = await fetch("/data/contactList.json");
@@ -22,6 +24,7 @@ const ContactList = () => {
       console.log(chatId);
       await fetchInitialMessages(chatId);
       setSelectedContactId(contactId);
+      navigate(`/` + chatId);
     } catch (error) {
       console.log(error);
     }
