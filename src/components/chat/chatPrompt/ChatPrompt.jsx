@@ -60,7 +60,7 @@ const ChatPrompt = () => {
         />
         <div className="emoji">
           <img
-            src="/images/emoji.png"
+            src="https://ananyab002.github.io/messenger/images/emoji.png"
             alt=""
             onClick={() => setOpenEmoji((prev) => !prev)}
           />
