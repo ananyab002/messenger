@@ -1,12 +1,9 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const ChatMessagesContext = createContext();
 
 export const ChatMessagesContextProvider = ({ children }) => {
-  const [allMessages, setAllMessages] = useState(
-    []
-    // JSON.parse(sessionStorage.getItem("chatHistory")) || []
-  );
+  const [allMessages, setAllMessages] = useState([]);
 
   const fetchInitialMessages = async (chatID) => {
     try {
@@ -22,12 +19,22 @@ export const ChatMessagesContextProvider = ({ children }) => {
     }
   };
 
-  // useEffect(() => {
-  //   sessionStorage.setItem("chatHistory", JSON.stringify(allMessages));
-  // }, [allMessages]);
+  const updateAllMessages = async (message, chatID) => {
+    console.log(message);
+    setAllMessages((prevData) => {
+      console.log(prevData, prevData[chatID]);
+      const updatedMessages = [...prevData[chatID], message];
+      return {
+        ...prevData,
+        [chatID]: updatedMessages,
+      };
+    });
+  };
 
   return (
-    <ChatMessagesContext.Provider value={{ allMessages, fetchInitialMessages }}>
+    <ChatMessagesContext.Provider
+      value={{ allMessages, fetchInitialMessages, updateAllMessages }}
+    >
       {children}
     </ChatMessagesContext.Provider>
   );

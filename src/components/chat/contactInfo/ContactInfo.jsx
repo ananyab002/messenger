@@ -2,6 +2,9 @@ import "./contactInfo.scss";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 
+/**
+ * Fetches contact information based on the provided chatID.
+ */
 const fetchContactInfo = async ({ queryKey }) => {
   try {
     const [, chatID] = queryKey;

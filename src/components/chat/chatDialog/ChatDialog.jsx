@@ -5,6 +5,10 @@ import { useParams } from "react-router-dom";
 
 import "./chatDialog.scss";
 
+/**
+ * ChatDialog component renders the chat interface displaying messages.
+ * It fetches messages from the ChatMessagesContext based on the chatID
+ */
 const ChatDialog = () => {
   const todayDate = new Date();
   const centerRef = useRef(null);
@@ -12,6 +16,11 @@ const ChatDialog = () => {
   const { chatID } = useParams();
 
   const [messages, setMessages] = useState([]);
+
+  /**
+   * Fetches messages for the current chatID from the context and
+   * updates the local state with the fetched messages.
+   */
   const fetch = () => {
     if (allMessages) setMessages(allMessages[chatID]);
   };
@@ -19,6 +28,10 @@ const ChatDialog = () => {
   useEffect(() => {
     fetch();
   }, [chatID, allMessages]);
+
+  /**
+   * useEffect to bottom scroll.
+   */
 
   useEffect(() => {
     const center = centerRef.current;

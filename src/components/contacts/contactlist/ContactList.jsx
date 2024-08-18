@@ -3,6 +3,9 @@ import { ChatMessagesContext } from "../../../context/ChatMessagesContext";
 import "./contactList.scss";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Fetches contact list data from a JSON file and updates state.
+ */
 const ContactList = () => {
   const { fetchInitialMessages } = useContext(ChatMessagesContext);
   const [contactList, setcontactList] = useState([]);

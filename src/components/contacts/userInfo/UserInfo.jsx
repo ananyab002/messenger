@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import "./userInfo.scss";
 
+/**
+ * UserInfo component fetches and displays user profile information.
+ */
 const UserInfo = () => {
   const [userInfo, setUserInfo] = useState(null);
 

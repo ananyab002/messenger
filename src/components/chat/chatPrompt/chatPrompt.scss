@@ -1,0 +1,28 @@
+.bottom {
+  flex: 1;
+  align-items: flex-end;
+  padding: 20px;
+  margin-top: auto;
+  border-top: 1px solid #dddddd35;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    .messageInput {
+      padding: 20px;
+      border: none;
+      border-radius: 10px;
+      width: 90%;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+    }
+
+    .sendButton {
+      border: none;
+      background-color: skyblue;
+      padding: 10px;
+    }
+  }
+}
