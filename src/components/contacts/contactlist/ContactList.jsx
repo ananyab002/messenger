@@ -13,7 +13,9 @@ const ContactList = () => {
   const navigate = useNavigate();
 
   const fetchContactList = async () => {
-    const response = await fetch("/data/contactList.json");
+    const response = await fetch(
+      "https://ananyab002.github.io/messenger/data/contactList.json"
+    );
     const contactsData = await response.json();
     setcontactList(contactsData);
   };

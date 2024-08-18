@@ -8,7 +8,9 @@ const UserInfo = () => {
   const [userInfo, setUserInfo] = useState(null);
 
   const fetchUserInfo = async () => {
-    const response = await fetch("/data/user.json");
+    const response = await fetch(
+      "https://ananyab002.github.io/messenger/data/user.json"
+    );
     const userData = await response.json();
     setUserInfo(userData);
   };

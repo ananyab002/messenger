@@ -7,7 +7,9 @@ export const ChatMessagesContextProvider = ({ children }) => {
 
   const fetchInitialMessages = async (chatID) => {
     try {
-      const response = await fetch("/data/initialMessages.json");
+      const response = await fetch(
+        "https://ananyab002.github.io/messenger/data/initialMessages.json"
+      );
       if (!response.ok) throw new Error("Failed to fetch messages");
       const data = await response.json();
       const findChatIdData = data[chatID];

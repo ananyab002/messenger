@@ -8,7 +8,9 @@ import { useQuery } from "@tanstack/react-query";
 const fetchContactInfo = async ({ queryKey }) => {
   try {
     const [, chatID] = queryKey;
-    const response = await fetch("/data/contactList.json");
+    const response = await fetch(
+      "https://ananyab002.github.io/messenger/data/contactList.json"
+    );
     const contactsData = await response.json();
     const chatIdData = contactsData.find((item) => item.chatId === chatID);
     return chatIdData || {};
