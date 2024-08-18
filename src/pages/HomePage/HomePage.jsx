@@ -1,7 +1,12 @@
+import Contacts from "../../components/contacts/Contacts";
 import "./homePage.scss";
 
-const Home = () => {
-  return <div className="container"></div>;
+const HomePage = () => {
+  return (
+    <div className="container">
+      <Contacts />
+    </div>
+  );
 };
 
-export default Home;
+export default HomePage;
