@@ -1,4 +1,5 @@
 # Messenger
+Application hosted on (https://ananyab002.github.io/messenger/)
 
 A simple chat application frontend built with Reactjs, designed to display and interact with hardcoded JSON data. The application simulates a chat interface, allowing users to view contacts, send messages, and view user profile information.
 
