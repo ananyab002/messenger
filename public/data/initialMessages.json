@@ -1,63 +1,39 @@
 {
-    "1550e8400-e29b-41d4-a716-446655440000": [{
-            "id": "123e4567-e89b-12d3-a456-426614174000",
-            "message": "Hello!",
+    "chat-1": [{
+            "id": "contact-1",
+            "message": "Hello Kevin!",
             "time": "08:30 AM",
             "date": "2024-08-10"
         },
         {
-            "id": "123e4567-e89b-12d3-a456-426614174000",
-            "message": "How are you?",
+            "id": 1,
+            "message": "Hi Bob. Its been so long. How is it going?",
             "time": "08:31 AM",
             "date": "2024-08-10"
         },
         {
-            "id": 1,
-            "message": "Good morning!",
+            "id": "contact-1",
+            "message": "I know, right? Time flies. I’ve been good, just busy with work and life. What about you? How’s everything going?",
             "time": "09:00 AM",
             "date": "2024-08-10"
         },
         {
-            "id": "123e4567-e89b-12d3-a456-426614174000",
-            "message": "Let's start the meeting. Otherwise we will late for project delivery. Please keep your system ready",
-            "time": "09:05 AM",
-            "date": "2024-08-10"
-        },
-        {
             "id": 1,
-            "message": "Meeting notes.",
+            "message": "Same here. It’s been a whirlwind—work, family, trying to squeeze in some me-time. But I’ve missed you! We used to be inseparable.",
             "time": "10:00 AM",
             "date": "2024-08-10"
         },
         {
-            "id": 1,
-            "message": "Please review. Message me if you find anything which needs to be changed. I will available till 8",
-            "time": "10:15 AM",
-            "date": "2024-08-10"
-        },
-        {
-            "id": "123e4567-e89b-12d3-a456-426614174000",
-            "message": "Lunch break.",
+            "id": "contact-1",
+            "message": "I’ve missed you too! Remember those late-night talks and spontaneous road trips? We should definitely plan something like that again.",
             "time": "12:00 PM",
             "date": "2024-08-10"
         },
         {
             "id": 1,
-            "message": "See you after lunch.",
+            "message": "Absolutely! We’ve got so much to catch up on. How’s your family? And what’s new with work?",
             "time": "12:01 PM",
             "date": "2024-08-10"
-        },
-        {
-            "id": "123e4567-e89b-12d3-a456-426614174000",
-            "message": "Back to work.",
-            "time": "01:00 PM",
-            "date": "2024-08-16"
-        },
-        {
-            "id": "123e4567-e89b-12d3-a456-426614174000",
-            "message": "Project update?",
-            "time": "01:05 PM",
-            "date": "2024-08-16"
         }
     ]
 

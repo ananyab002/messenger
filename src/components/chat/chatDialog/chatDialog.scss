@@ -1,0 +1,56 @@
+.center {
+  padding: 20px;
+  flex: 6;
+  overflow-y: auto; /* Enable scrolling within the center */
+  scroll-behavior: smooth;
+  max-height: calc(100vh - 320px);
+  scrollbar-color: #222 black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .message {
+    max-width: 70%;
+    display: flex;
+    gap: 10px;
+
+    &.user {
+      align-self: flex-end;
+
+      .texts {
+        p {
+          background-color: rgb(81, 141, 164);
+          overflow-wrap: anywhere;
+        }
+        .dateTime {
+          display: flex;
+          gap: 10px;
+          span {
+            font-size: 12px;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+
+      p {
+        padding: 20px;
+        background-color: rgba(61, 66, 76, 0.3);
+        border-radius: 10px;
+        word-wrap: break-word;
+      }
+      .dateTime {
+        display: flex;
+        gap: 10px;
+        span {
+          font-size: 12px;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}
