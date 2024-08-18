@@ -1,7 +1,7 @@
 [{
     "id": "contact-1",
     "name": "Bob",
-    "img": "/images/friend.png",
+    "img": "https://ananyab002.github.io/messenger/images/friend.png",
     "status": "Available",
     "chatId": "chat-1"
 
