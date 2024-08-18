@@ -12,7 +12,6 @@ export const ChatMessagesContextProvider = ({ children }) => {
       const data = await response.json();
       const findChatIdData = data[chatID];
       const chatIdData = { [chatID]: [...findChatIdData] };
-      console.log("fetchInitialMessages");
       setAllMessages(chatIdData);
     } catch (error) {
       console.log(error);
@@ -20,9 +19,7 @@ export const ChatMessagesContextProvider = ({ children }) => {
   };
 
   const updateAllMessages = async (message, chatID) => {
-    console.log(message);
     setAllMessages((prevData) => {
-      console.log(prevData, prevData[chatID]);
       const updatedMessages = [...prevData[chatID], message];
       return {
         ...prevData,

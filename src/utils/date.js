@@ -1,5 +1,5 @@
 function getDate(givenDate) {
-  const dates = new Date(givenDate);
+  const dates = new Date(givenDate.toLocaleString());
   const month = dates.getMonth() + 1;
   const year = dates.getFullYear();
   const date = dates.getDate();

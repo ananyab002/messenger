@@ -3,7 +3,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import ChatPrompt from "./ChatPrompt";
 import { ChatMessagesContext } from "../../../context/ChatMessagesContext";
 import { useParams } from "react-router-dom";
-import { formatTime, getFormattedDate } from "../../../utils/date";
 
 // Mock useParams to return a specific chatID
 jest.mock("react-router-dom", () => ({

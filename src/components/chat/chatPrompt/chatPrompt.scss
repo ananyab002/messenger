@@ -19,6 +19,7 @@
     }
     .emoji {
       position: relative;
+      cursor: pointer;
       .emojiPicker {
         position: absolute;
         bottom: 50px;
@@ -29,6 +30,7 @@
       border: none;
       background-color: skyblue;
       padding: 15px;
+      cursor: pointer;
     }
   }
 }

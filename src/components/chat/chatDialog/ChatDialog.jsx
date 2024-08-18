@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { getDate } from "../../../utils/date";
 import { ChatMessagesContext } from "../../../context/ChatMessagesContext";
 import { useParams } from "react-router-dom";
@@ -21,13 +21,13 @@ const ChatDialog = () => {
    * Fetches messages for the current chatID from the context and
    * updates the local state with the fetched messages.
    */
-  const fetch = () => {
+  const fetch = useCallback(() => {
     if (allMessages) setMessages(allMessages[chatID]);
-  };
+  }, [chatID, allMessages]);
 
   useEffect(() => {
     fetch();
-  }, [chatID, allMessages]);
+  }, [chatID, allMessages, fetch]);
 
   /**
    * useEffect to bottom scroll.

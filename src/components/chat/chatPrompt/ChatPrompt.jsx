@@ -12,7 +12,6 @@ import "./chatPrompt.scss";
 const ChatPrompt = () => {
   const { register, handleSubmit, watch, setValue, reset } = useForm();
   const [openEmoji, setOpenEmoji] = useState(false);
-  const [messages, setMessages] = useState([]);
   const { chatID } = useParams();
 
   const { updateAllMessages } = useContext(ChatMessagesContext);
@@ -28,8 +27,6 @@ const ChatPrompt = () => {
       time: formatTime(new Date()),
       date: getFormattedDate(new Date()),
     };
-    setMessages((prevData) => [...prevData, ...data.message]);
-    console.log(messages);
     await updateAllMessages(messageObject, chatID);
     reset();
   };
