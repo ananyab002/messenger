@@ -7,22 +7,28 @@
   form {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 50px;
     .messageInput {
       padding: 20px;
       border: none;
       border-radius: 10px;
-      width: 90%;
+      width: 80%;
       background-color: black;
       color: white;
       font-size: 18px;
     }
-
+    .emoji {
+      position: relative;
+      .emojiPicker {
+        position: absolute;
+        bottom: 50px;
+        right: 10px;
+      }
+    }
     .sendButton {
       border: none;
       background-color: skyblue;
-      padding: 10px;
+      padding: 15px;
     }
   }
 }

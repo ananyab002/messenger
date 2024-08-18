@@ -3,14 +3,15 @@ import { useForm } from "react-hook-form";
 import { memo, useContext, useState } from "react";
 import { ChatMessagesContext } from "../../../context/ChatMessagesContext";
 import { useParams } from "react-router-dom";
+import EmojiPicker from "emoji-picker-react";
 import "./chatPrompt.scss";
 
 /**
  *  Handles the input and submission of new chat messages.
  */
 const ChatPrompt = () => {
-  const { register, handleSubmit, watch, reset } = useForm();
-
+  const { register, handleSubmit, watch, setValue, reset } = useForm();
+  const [openEmoji, setOpenEmoji] = useState(false);
   const [messages, setMessages] = useState([]);
   const { chatID } = useParams();
 
@@ -43,6 +44,13 @@ const ChatPrompt = () => {
       if (currentMessage.trim()) handleSubmit(handleSendMessage)();
     }
   };
+
+  const handleEmoji = (e) => {
+    const sendMessage = watch("message") || "";
+    setValue("message", sendMessage + e.emoji + "");
+    setOpenEmoji(false);
+  };
+
   return (
     <div className="bottom">
       <form onSubmit={handleSubmit(handleSendMessage)}>
@@ -53,6 +61,16 @@ const ChatPrompt = () => {
           placeholder="Type a message...."
           onKeyDown={handleKeyDown}
         />
+        <div className="emoji">
+          <img
+            src="/images/emoji.png"
+            alt=""
+            onClick={() => setOpenEmoji((prev) => !prev)}
+          />
+          <div className="emojiPicker">
+            <EmojiPicker open={openEmoji} onEmojiClick={handleEmoji} />
+          </div>
+        </div>
         <button type="submit" className="sendButton">
           Send
         </button>
