@@ -5,11 +5,11 @@ import Chat from "../components/chat/Chat";
 function Router({ children }) {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/messenger",
       element: <HomePage />,
       children: [
         {
-          path: "/:chatID",
+          path: "/messenger/:chatID",
           element: <Chat />,
         },
       ],

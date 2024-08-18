@@ -27,7 +27,7 @@ const ContactList = () => {
       console.log(chatId);
       await fetchInitialMessages(chatId);
       setSelectedContactId(contactId);
-      navigate(`/` + chatId);
+      navigate(`/messenger/` + chatId);
     } catch (error) {
       console.log(error);
     }
